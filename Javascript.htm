@@ -1,0 +1,214 @@
+<!doctype html>
+<body onload="setInterval('updateTime()',1000)">
+<style>
+#clock {
+	font-family: Arial;
+	font-size: 18px;
+	border: 1.5px solid black;
+	padding: 1.5em;
+	background-color: #333;
+	color: white;
+}
+
+#overviewHeader {
+	font-family: Arial;
+	color: white;
+}
+
+#homeIndex {
+	background-color: #008000;
+}
+
+#p_cInfo {
+	font-family: Arial;
+	color: white;
+}
+
+#cInformation {
+	border: 1.5px solid black;
+	padding: 1em;
+	background-color: #333;
+}
+
+#pInformation {
+	border: 1.5px solid black;
+	padding: 1em;
+	background-color: #333;
+}
+
+#reflection {
+	border: 1.5px solid black;
+	padding: 1.5em;
+	font-size: 18px;
+	background-color: #333;
+	color: white;
+}
+
+#overview {
+	font-family: Arial;
+	color: white;
+}
+#moduleHeader { 
+    background-color: #008000;
+	font-family: Arial
+}
+
+#pageHeader {
+	color: white;
+	font-weight: bold;
+	background: #333;
+	padding: 0.5em;
+	text-align: center;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    top: 0;
+	position: sticky;
+	font-size: 18px;
+}
+
+nav li {
+    float: left;
+	font-family: Arial;
+	font-size: 18px;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+	font-size: 18px;
+    padding: 15px 30px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #111;
+}
+
+body {
+	background-color: #4d4d4d;
+}
+
+h, h1, h2, h4, h5 {
+	background-color: #333;
+	font-family: Arial;
+	padding: 0.5em;
+	color: white;
+}
+
+h3 {
+	background-color: #333;
+	font-family: Arial;
+	padding: 0.5em;
+	font-weight: bold;
+}
+
+p, p1, p2, p3, p4, p5 {
+	font-family: Arial;
+	background-color: #333
+}
+
+div li {
+	font-family: Arial;
+	color: white;
+}
+
+button { 
+   font-size: 1.1em;
+   background-color: #EBF5FF;
+   color: #4312AE;
+   border: 2px solid black;
+   box-shadow: 4px 4px 4px #999999;
+}
+button:hover, button:focus, button:active { 
+	/* swap colors */
+	color: #EBF5FF;
+	background-color: #4312AE;
+	cursor: pointer; /* displays a hand */
+}
+
+
+</style>
+
+<center>
+<img src="\\brsd-jb-fs01\18scottm$\Portfolio_MatthewScott\Web_PortfolioFinal_Matt\Media\banner3.png" />
+</center>
+
+
+<h1 id="pageHeader">JavaScript Section</h1>
+<center>
+<nav>
+<div id="tableOfContents">
+	<ul>
+		<li id="homeIndex"><a href= "\\brsd-jb-fs01\18scottm$\Portfolio_MatthewScott\Web_PortfolioFinal_Matt\index.htm"><img src="\\brsd-jb-fs01\18scottm$\Portfolio_MatthewScott\Web_PortfolioFinal_Matt\Media\home-5-256.png" width="20" height="20" /></a></li>
+		<li><a href= "\\brsd-jb-fs01\18scottm$\Portfolio_MatthewScott\Web_PortfolioFinal_Matt\Accessibility.htm"> Accessibility</a>
+		<li><a href= "\\brsd-jb-fs01\18scottm$\Portfolio_MatthewScott\Web_PortfolioFinal_Matt\Graphics.htm"> Graphics</a>
+		<li><a href= "\\brsd-jb-fs01\18scottm$\Portfolio_MatthewScott\Web_PortfolioFinal_Matt\Tools.htm"> Tools</a>
+		<li><a href= "\\brsd-jb-fs01\18scottm$\Portfolio_MatthewScott\Web_PortfolioFinal_Matt\Usability.htm"> Usability</a>
+		<li><a href= "\\brsd-jb-fs01\18scottm$\Portfolio_MatthewScott\Web_PortfolioFinal_Matt\Javascript.htm"> Javascript</a>
+		<li><a href= "\\brsd-jb-fs01\18scottm$\Portfolio_MatthewScott\Web_PortfolioFinal_Matt\Videos.htm"> Videos</a>
+		<li><a href= "\\brsd-jb-fs01\18scottm$\Portfolio_MatthewScott\Web_PortfolioFinal_Matt\about.htm"> About</a>
+	</ul>
+</div>
+</nav>
+</center>
+
+<h2 id ="filetypes">Example showAlert Button</h2>
+	<p id="reflection">
+	This new code adds a button to your web page. The button includes the onclick attribute, which causes the showAlert() to be called when a user clicks the button. The onclick event also works for keyboard users. If a user navigates to the button using the tab key, then presses enter, that too will trigger the alert.
+	</p>
+
+<ul>
+<head>
+	<script>
+		function showAlert() { 
+			var myText = "Welcome to the JavaScript Section of Matthew Scott's Web Portfolio Page";
+			alert (myText);
+		}
+	</script>
+</ul>
+
+ <p id="reflection">	
+<button onclick="showAlert()">Show alert</button>
+ </p>
+ 
+ 
+<h2 id ="filetypes">Example updateTime Script</h2>
+	<p id="reflection">
+	</p>
+ 
+	<div id="clock">
+		<script>
+			function updateTime() { 
+				var now = new Date();
+				var hours = now.getHours();
+				var minutes = now.getMinutes();
+				var seconds = now.getSeconds();
+				var currentTime = hours + ':' + minutes + ':' + seconds + '  ' + timeOfDay;
+				var myClock = document.getElementById('clock');
+				myClock.innerHTML = currentTime;
+				if (minutes < 10) { 
+				minutes = '0' + minutes;
+				}
+				if (seconds < 10) { 
+				seconds = '0' + seconds;
+				}				
+				if (hours >= 12 && hours < 24) { 
+				var timeOfDay = 'PM';
+				}
+				else { 
+				var timeOfDay = 'AM'; 
+				}
+				if (hours > 12) { 
+				hours = hours - 12;
+				}
+			}
+			</script>
+		</div>
+	</body>
+ </head>
